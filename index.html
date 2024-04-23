@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=1">
+
+    <meta name="description" content="An electromagnetic waves visualizer">
+    <meta name="keywords" content="physics, light, electromagnetic field, electromagnetic wave">
+    <meta name="theme-color" content="#000000">
+
+    <title>Reaction time</title>
+
+    <!--link rel="icon" type="image/png" href="imgs/icon.png"-->
+    <link rel="stylesheet" href="css/crimson-days.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+
+</head>
+
+<body>
+    <div id="page-container" class="full-size">
+        <div id="result-background"></div>
+        <div id="text-container">
+            <nobr id="instructions">
+                <span>
+                    Press
+                    <span class="material-symbols-outlined label">
+                        space_bar
+                    </span>
+                    or
+                    <span class="material-symbols-outlined label">
+                        mouse
+                    </span>
+                </span>
+                <span id="running-test-text" style="display: none;">
+                    when the
+                    <span class="material-symbols-outlined label">
+                        desktop_windows
+                    </span>
+                    turns
+                    <span id="red-fill-label" class="material-symbols-outlined label">
+                        format_color_fill
+                    </span>
+                </span>
+                <span id="start-test-text" style="display: inline;">
+                    to
+                    <span class="material-symbols-outlined label">
+                        directions_run
+                    </span>
+                    the test
+                </span>
+            </nobr>
+            <div id="result-text-container">
+                <span id="reaction-time-text">(waiting to start)</span>
+            </div>
+        </div>
+
+        <script src="js/src/reaction-time-controller.js"></script>
+    </div>
+</body>
+
+</html>

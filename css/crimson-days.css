@@ -1,0 +1,155 @@
+/* Styling for the reaction time app */
+
+/* ==================================
+    Table of content
+    ----------------
+    1. Global
+        - Fonts
+        - Touch behaviour
+        - Variables
+        - Selection
+        - Scrollbar
+    2. Components
+        2.1 Body
+        
+===================================== */
+
+/* ============================
+    1. Global
+    =============================== */
+
+/* -- Fonts -- */
+
+/* Robot Mono and STIX Two Text from Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/**/
+
+/* -- Touch behaviour (and disable highlight rectangle on mobile) -- */
+
+* {
+    touch-action: none;
+    -webkit-tap-highlight-color: #ffffff00;
+}
+
+/* -- Variables -- */
+
+:root {
+    --background: #ffffff;
+    --hidden: #686868;
+    --accent: #d82000;
+    --primary: #1a1a1a;
+    --secondary: #333333;
+}
+
+/* -- Selection -- */
+
+* {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+::-moz-selection {
+    color: #eeeeee;
+    background: var(--accent);
+}
+
+::selection {
+    color: #eeeeee;
+    background: var(--accent);
+}
+
+/* -- Scrollbar -- */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00000015;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00000030;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--accent);
+}
+
+/* -- Focus -- */
+
+*:focus-visible:not(input.input-box) {
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #00000030;
+}
+
+/* -- 2.1 Body -- */
+
+body, html, #page-container {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto-Mono', monospace;
+    font-size: 1.15em;
+    color: var(--secondary);
+    scrollbar-width: thin;
+    transition: all .2s ease-in-out;
+}
+
+.full-size {
+    width: 100%;
+    height: 100%;
+}
+
+#page-container {
+    display: grid;
+    place-items: center;
+}
+
+#result-background {
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 0;
+}
+
+#text-container {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+#result-background {
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-in-out;
+}
+
+.material-symbols-outlined.label {
+    vertical-align: middle;
+}
+
+#red-fill-label {
+    color: #d82000;
+}
+
+#result-text-container {
+    margin-top: 10pt;
+}
