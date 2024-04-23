@@ -24,10 +24,6 @@ document.onkeydown = (e) => {
     }
 }
 
-document.ontouchend = () => {
-    toggleReactionTest();
-}
-
 function toggleReactionTest() {
     if (testRunning) {
         if (startTime != null) {
